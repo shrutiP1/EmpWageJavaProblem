@@ -159,6 +159,8 @@ public class EmpWage
 		EmpWage.calWageUC5();
 		//UC6
 		EmpWage.calWageUC6();
+		//UC7
+		System.out.println("Refactored code by using class method");
 	}
 
 }
