@@ -6,7 +6,7 @@ public class EmpWage
 	public static final int IS_PART_TIME=2;
 	public static final int EMP_RATE_PER_HR= 20;
 	public static final int NUM_OF_WORKING_DAYS=20;
-	 public static final int MAX_HRS_IN_MONTH=100;
+	public static final int MAX_HRS_IN_MONTH=100;
 	public static void checkUC1()
 	{
 		System.out.println("UC1 Output:");
