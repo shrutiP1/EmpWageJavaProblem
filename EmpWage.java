@@ -66,6 +66,27 @@ public class EmpWage
 		 System.out.println("Emp Wage :"+empWage);
 		 
 	 }
+	 public static void calWageUC4()
+	 {
+		 System.out.println("UC4 output:");
+		 int empHr=0;
+		 int res=calOption();
+		 switch(res)
+		 {
+		     case IS_FULL_TIME:
+		    	    empHr=8;
+		    	    break;
+		     case IS_PART_TIME:
+		    	  empHr=4;
+		    	  break;
+		    default:
+		    	empHr=0;
+		    	break;
+		 }
+		 int empWage=calSalary(empHr);
+		 System.out.println("Emp Wage using switch case :"+empWage);
+		 
+	 }
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to Employee Wage Problem");
@@ -75,6 +96,8 @@ public class EmpWage
 		EmpWage.calWageUC2();
 		//UC3
 	    EmpWage.calWageUC3();
+	    //UC4
+	    EmpWage.calWageUC4();
 	}
 
 }
