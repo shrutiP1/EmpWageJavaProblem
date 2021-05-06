@@ -5,6 +5,7 @@ public class EmpWage
 	public static final int IS_FULL_TIME = 1;
 	public static final int IS_PART_TIME=2;
 	public static final int EMP_RATE_PER_HR= 20;
+	public static final int NUM_OF_WORKING_DAYS=20;
 	public static void checkUC1()
 	 {
 		 System.out.println("UC1 Output:");
@@ -87,6 +88,32 @@ public class EmpWage
 		 System.out.println("Emp Wage using switch case :"+empWage);
 		 
 	 }
+	 public static void calWageUC5()
+	 {
+		 System.out.println("UC5 Output:");
+		 int empHr=0;
+		 int totalEmpHr=0;
+		 for(int i=1;i<=NUM_OF_WORKING_DAYS;i++)
+		 {
+			 int res=calOption();
+			 switch(res)
+			 {
+			     case IS_FULL_TIME:
+			    	    empHr=8;
+			    	    break;
+			     case IS_PART_TIME:
+			    	  empHr=4;
+			    	  break;
+			    default:
+			    	empHr=0;
+			    	break;
+			 }
+			 totalEmpHr+=empHr;
+			 
+		 }
+		 int empWage=calSalary(totalEmpHr);
+		 System.out.println("Emp Wage of 20 days:"+empWage);
+	}
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to Employee Wage Problem");
@@ -98,6 +125,8 @@ public class EmpWage
 	    EmpWage.calWageUC3();
 	    //UC4
 	    EmpWage.calWageUC4();
+	    //UC5
+	    EmpWage.calWageUC5();
 	}
 
 }
