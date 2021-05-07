@@ -7,6 +7,7 @@ public class EmpWage
 	public static final int EMP_RATE_PER_HR= 20;
 	public static final int NUM_OF_WORKING_DAYS=20;
 	public static final int MAX_HRS_IN_MONTH=100;
+
 	
 	//UC8
 	private final String company;
@@ -22,6 +23,7 @@ public class EmpWage
 		this.maxHrs=maxHrs;
 		
 	}
+
 	public static void checkUC1()
 	{
 		System.out.println("UC1 Output:");
