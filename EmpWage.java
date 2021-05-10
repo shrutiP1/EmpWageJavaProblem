@@ -14,6 +14,7 @@ public class EmpWage
 	private final int empRate;
 	private final int numOfWorkingDays;
 	private final int maxHrs;
+	private int totalWage;
 	
 	public EmpWage(String company,int empRate,int numOfWorkingDays,int maxHrs)
 	{
@@ -161,7 +162,7 @@ public class EmpWage
 		System.out.println("Total Employee Wage of maximum 100 hours and 20 days : "+empWage);
 
 	}
-	public static void calWageUC8(EmpWage e1)
+	public void calWageUC8(EmpWage e1)
 	{
 		
 		int empHr=0;
@@ -186,9 +187,13 @@ public class EmpWage
 			totalWorkingDays++;
 
 		}
-		int totalWage=totalEmpHr*e1.empRate;
+		totalWage=totalEmpHr*e1.empRate;
 		System.out.println("Total Employee Wage for Company "+e1.company+" is "+totalWage);
 
+	}
+	public String toString()
+	{
+		return "Total Employee Wage for company "+company+"is "+totalWage;
 	}
 	public static void main(String[] args)
 	{
@@ -214,7 +219,10 @@ public class EmpWage
 		infosys.calWageUC8(infosys);
 		EmpWage wipro=new EmpWage("Wipro",20,25,100);
 		wipro.calWageUC8(wipro);
-		
+		//UC9
+		System.out.println("UC9 Output");
+	    System.out.println(infosys);
+	    System.out.println(wipro);
 	}
 
 }
